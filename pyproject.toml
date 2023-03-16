@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "projectx"
+version = "0.1.0"
+description = ""
+authors = ["vvvin333 <333vvvin@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+django = "^4.1.6"
+django-ninja = "^0.20.0"
+pytest-django = "^4.5.2"
+model-bakery = "^1.10.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.pytest.ini_options]
+minversion = "7.2.1"
+testpaths = ["./tests/"]
+env_files = [".env.test"]
+python_paths = './src'
+#addopts = "--cov --no-cov-on-fail"
+log_level = "info"
+env_override_existing_values = 1
+DJANGO_SETTINGS_MODULE = "adverteasing.settings"
+
